@@ -1,0 +1,32 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.sprites-anim{
+    height: 160px;
+    width: 160px;
+    background: url(./ninja-sprite.png) 0px 0px;
+    animation: play 0.7s steps(8) infinite,
+    steps 5s linear infinite;
+    position: absolute;
+    left: 0;
+}
+
+.sprites-anim:hover {
+    animation-play-state: paused;
+}
+
+@keyframes play {
+    100% {
+        background-position: -1279px;
+    }
+}
+
+@keyframes steps {
+    100% {
+        left: 100%;
+    }
+}
+
